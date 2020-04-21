@@ -22,9 +22,9 @@ Rede social para escritores e aspirantes a escritores. Projeto desenvolvido no P
 
 install [docker compose](https://docs.docker.com/compose/install/)
 
-`docker-compose up -d`
-
 `cd backend`
+
+`docker-compose up -d`
 
 `node app.js`
 
