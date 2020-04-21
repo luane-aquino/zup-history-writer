@@ -26,7 +26,7 @@ Rede social para escritores e aspirantes a escritores. Projeto desenvolvido no P
 
 `node app.js`
 
-Open [](localhost:3000)
+Open [localhost:3000](localhost:3000)
 
 ## Autores
 
