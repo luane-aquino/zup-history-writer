@@ -20,6 +20,8 @@ Rede social para escritores e aspirantes a escritores. Projeto desenvolvido no P
 
 `npm install`
 
+install [docker compose](https://docs.docker.com/compose/install/)
+
 `docker-compose up -d`
 
 `cd backend`
