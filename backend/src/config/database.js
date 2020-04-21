@@ -31,3 +31,7 @@ User.sync({ force: true }).then(() => {
     lastName: 'Hancock'
   })
 })
+
+User.findAll().then(users => {
+  console.log(users)
+})
