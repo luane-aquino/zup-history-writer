@@ -4,7 +4,7 @@
   "description": "Rede social para escritores e aspirantes a escritores. Projeto desenvolvido no Programa Gerando Gênios (PGG) da ZUP.",
   "main": "index.js",
   "scripts": {
-    "start": "node backend/app.js",
+    "start": "node backend/src/bin/server.js",
     "test": "standard",
     "dbsync": "node backend/src/bin/dbSync.js"
   },
