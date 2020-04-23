@@ -8,4 +8,6 @@ router.get('/:id', controller.getUserById)
 
 router.post('/:id/story', controller.createStory)
 
+router.get('/:id/stories', controller.getStories)
+
 module.exports = router

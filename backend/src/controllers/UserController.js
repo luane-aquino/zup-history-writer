@@ -34,5 +34,18 @@ module.exports = {
     } catch (error) {
       res.status(500).json({ error: 'internal server error...' })
     }
+  },
+  getStories: async (req, res) => {
+    try {
+      const { params: { id } } = req
+      const hasLogs = await Story.findAll({
+        where: { userId: id }
+      })
+
+      if (hasLogs) res.status(200).json(hasLogs)
+      else res.status(200).json({ message: 'no stories to show' })
+    } catch (error) {
+      res.status(500).json({ error: 'internal server error...' })
+    }
   }
 }
