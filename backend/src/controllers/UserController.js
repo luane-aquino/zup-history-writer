@@ -25,8 +25,9 @@ module.exports = {
   createStory: async (req, res) => {
     try {
       const { params: { id }, body } = req
+      const story = req.body
       await Story.create({
-        ...body,
+        ...story,
         userId: id
       })
       res.status(200).json({ message: 'success!!' })
