@@ -4,4 +4,6 @@ const controller = require('../controllers/StoryController')
 
 router.post('/:id/comment', controller.createComment)
 
+router.get('/:id/comments', controller.getComments)
+
 module.exports = router

@@ -15,5 +15,18 @@ module.exports = {
     } catch (error) {
       res.status(500).json({ error: 'internal server error...' })
     }
+  },
+  getComments: async (req, res) => {
+    try {
+      const { params: { id } } = req
+      const hasComments = await Comment.findAll({
+        where: { storyId: id }
+      })
+
+      if (hasComments) res.status(200).json(hasComments)
+      else res.status(200).json({ message: 'no comments to show' })
+    } catch (error) {
+      res.status(500).json({ error: 'internal server error...' })
+    }
   }
 }
