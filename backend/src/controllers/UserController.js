@@ -21,10 +21,17 @@ module.exports = {
     } catch (error) {
       res.status(500).json({ error: 'internal server error...' })
     }
+  },
+  createStory: async (req, res) => {
+    try {
+      const { params: { id }, body } = req
+      await Story.create({
+        ...body,
+        userId: id
+      })
+      res.status(200).json({ message: 'success!!' })
+    } catch (error) {
+      res.status(500).json({ error: 'internal server error...' })
+    }
   }
-  // createStory: async (req, res) => {
-  //   const story = req.body
-  //   await Story.create({ ...story })
-  //   res.status(200).json({ message: 'success!!' })
-  // }
 }

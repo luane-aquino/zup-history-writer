@@ -6,4 +6,6 @@ router.post('/signup', controller.createUser)
 
 router.get('/:id', controller.getUserById)
 
+router.post('/:id/story', controller.createStory)
+
 module.exports = router
