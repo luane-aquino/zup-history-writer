@@ -24,7 +24,7 @@ module.exports = {
   },
   createStory: async (req, res) => {
     try {
-      const { params: { id }, body } = req
+      const { params: { id } } = req
       const story = req.body
       await Story.create({
         ...story,
