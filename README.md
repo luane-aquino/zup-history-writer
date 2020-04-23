@@ -1,6 +1,8 @@
 # zup-story-writer
 Rede social para escritores e aspirantes a escritores. Projeto desenvolvido no Programa Gerando Gênios (PGG) da ZUP.
 
+API documentation: https://documenter.getpostman.com/view/11185819/Szf9WnZQ?version=latest
+
 ## Tecnologias utilizadas
 
 * HTML
