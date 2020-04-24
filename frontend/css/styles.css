@@ -78,7 +78,7 @@ a {
 .header .menu-btn {
   display: none;
 }
-/* transition effects to hamburger menu */
+/* transition effects for hamburger menu */
 .header .menu-btn:checked ~ .menu {
   max-height: 240px; 
 }
