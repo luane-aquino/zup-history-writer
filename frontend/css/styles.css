@@ -123,7 +123,7 @@ textarea {
   border-radius: 5px;
 }
 .comment button:hover {
-  background: #01a4a7;
+  background: #008c8f;
 }
 .comment__textarea {
   width: 275px;
