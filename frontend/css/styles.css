@@ -1,10 +1,12 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #bbb;
 }
 a {
   color: #000;
+}
+textarea {
+  resize: none;
 }
 .header {
   background-color: #013841;
@@ -12,6 +14,7 @@ a {
   position: fixed;
   width: 100%;
   z-index: 3;
+  top: 0;
 }
 .header ul {
   margin: 0;
@@ -92,4 +95,45 @@ a {
 .header .menu-btn:checked ~ .menu-icon .nav-icon:after {
   transform: rotate(45deg);
   top: 0;
+}
+/* comment */
+.main {
+  margin: 58px auto auto auto;
+  background: pink;
+}
+.container {
+  margin: 58px auto auto auto;
+  width: 350px;
+  padding: 0;
+}
+.comment {
+  display: flex;
+  flex-direction: column;
+  padding-top: 51px;
+}
+.comment button {
+  width: 75px;
+  height: 18px;
+  align-self: flex-end;
+  margin-top: 10px;
+  background: #007f81;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.comment button:hover {
+  background: #01a4a7;
+}
+.comment__textarea {
+  width: 275px;
+  height: 93px;
+  padding: 10px;
+  letter-spacing: 1px;
+  font-style: italic;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #999;
+  align-self: flex-end;
 }
