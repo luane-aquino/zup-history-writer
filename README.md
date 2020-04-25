@@ -28,7 +28,7 @@ install [docker compose](https://docs.docker.com/compose/install/)
 
 `docker-compose up -d`
 
-`node app.js`
+`npm start`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
