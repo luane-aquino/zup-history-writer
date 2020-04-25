@@ -5,6 +5,32 @@ body {
 a {
   color: #000;
 }
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.btn {
+  width: 75px;
+  height: 18px;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-size: 12px;
+}
+.btn--larger {
+  width: 85px;
+}
+.blue {
+  background: #007f81;
+}
+.green {
+  background: #438641;
+}
+.red {
+  background: #ab4141;
+}
 textarea {
   resize: none;
 }
@@ -99,7 +125,7 @@ textarea {
 /* comment */
 .main {
   margin: 58px auto auto auto;
-  background: pink;
+  background: #fff;
 }
 .container {
   margin: 58px auto auto auto;
@@ -112,15 +138,8 @@ textarea {
   padding-top: 51px;
 }
 .comment button {
-  width: 75px;
-  height: 18px;
   align-self: flex-end;
   margin-top: 10px;
-  background: #007f81;
-  color: #fff;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
 }
 .comment button:hover {
   background: #008c8f;
@@ -133,7 +152,39 @@ textarea {
   font-style: italic;
   line-height: 1.5;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 1px;
   box-shadow: 1px 1px 1px #999;
   align-self: flex-end;
+  background-color: #fffbfb;
 }
+/* comment list */
+.comment__list {
+  margin-top: 25px;
+}
+.comment__list ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 65px;
+}
+.comment__list ul li {
+  width: 275px;
+  height: 165px;
+  padding: 5px;
+  background-color: #fffbfb;
+  font-style: italic;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 13px;
+  box-shadow: 1px 1px 1px #999;
+  margin-bottom: 20px;
+}
+.comment__list div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.comment__list button:first-child {
+  margin: 0 10px;
+}
+
