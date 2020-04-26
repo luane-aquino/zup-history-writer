@@ -191,6 +191,7 @@ textarea {
 }
 .comment__list ul li p {
   margin: 10px 0 10px 0;
+  height: 80px;
 }
 .comment__list div {
   display: flex;
