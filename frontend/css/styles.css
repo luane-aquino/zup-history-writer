@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  color: #000;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: 58px auto auto auto;
+  width: 350px;
+  padding: 0;
+}
+.main {
+  background: #fff;
+}
+.btn {
+  width: 75px;
+  height: 18px;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-size: 12px;
+}
+.btn--larger {
+  width: 85px;
+}
+.blue {
+  background: #007f81;
+}
+.green {
+  background: #438641;
+}
+.red {
+  background: #ab4141;
+}
+textarea {
+  resize: none;
+}
