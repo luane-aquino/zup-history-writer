@@ -74,21 +74,22 @@
 .story__article img {
   width: 100%;
   border: 1px solid #6C6C6C;
+  margin-top: 30px;
 }
-.story__opnion {
+.story__opinion {
   background: #E2F2EB;
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 37px;
 }
-.story__opnion p {
+.story__opinion p {
   margin: 0;
   font-size: 14px;
   line-height: 16px;
   font-family: 'Roboto Condensed', sans-serif;
   padding-right: 12px;
 }
-.story__opnion button {
+.story__opinion button {
   margin-right: 10px;
 }
