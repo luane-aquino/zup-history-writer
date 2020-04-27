@@ -10,4 +10,6 @@ router.post('/:id/story', controller.createStory)
 
 router.get('/:id/stories', controller.getStories)
 
+router.get('/:id/allInformations', controller.allUserInformations)
+
 module.exports = router
