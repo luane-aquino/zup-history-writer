@@ -20,15 +20,15 @@ input, textarea {
   padding: 0;
   border: 0;
 }
-.create__story__title label {
+.create__story__title label, .create__story__subtitle label {
   margin-bottom: 9px;
 }
-.create__story__title input, .create__story__tags input {
+.create__story__title input, .create__story__tags input, .create__story__subtitle input {
   height: 48px;
-  border: 1px solid #000000;
+  border: 1px solid #000;
   background: #fffbfb;
 }
-.create__story__text {
+.create__story__text, .create__story__subtitle {
   margin-top: 16px;
 }
 .create__story__text textarea {
