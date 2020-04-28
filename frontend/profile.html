@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/profile.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/profile.css">
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./js/profile.js" defer></script>
-    <title>Profile</title>
 </head>
 
 <body>
@@ -24,9 +25,16 @@
         </ul>
       </header>
     <div class="container">
-        <!--<div class="menu-icon">
-            <img src="images/menu-icon.svg" alt="menu icon" width="25" height="25" id="menu-icon" />
-        </div>-->
+
+        <header class="header">
+            <a href="./profile.html" class="logo">LOGO</a>
+            <input class="menu-btn" type="checkbox" id="menu-btn">
+            <label for="menu-btn" class="menu-icon"><span class="nav-icon"></span></label>
+            <ul class="menu">
+                <li><a href="./profile.html">Perfil</a></li>
+                <li><a href="./create-story.html">Criar Story</a></li>
+            </ul>
+        </header>
 
         <div class="user">
             <div class="elipse-externa1">
@@ -54,7 +62,7 @@
             <p id="pDesc"></p>
         </div>
         <div class="new">
-            <button type="button">New</button>
+            <a href="./create-story.html"><button type="button">New</button></a>
         </div>
 
         <div class="historias-usuario">

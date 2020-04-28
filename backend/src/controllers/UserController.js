@@ -52,15 +52,17 @@ module.exports = {
   userProfile: async (req, res) => {
     try {
       const { params: { id } } = req
-      const userExist = await User.findAll({ where: {id},
-        include: [{model: Story}]
-       })
-       console.log(typeof userExist)
+
+      const userExist = await User.findAll({
+        where: { id },
+        include: [{ model: Story }]
+      })
+
       if (userExist) res.status(200).json(userExist)
       else res.status(404).json({ message: 'user not found' })
     } catch (error) {
       res.status(500).json({ error: 'internal server error...' })
     }
   }
-    
+
 }
