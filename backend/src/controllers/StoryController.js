@@ -22,7 +22,7 @@ module.exports = {
       const hasComments = await Comment.findAll({
         where: { storyId: id }
       })
-
+      console.log(typeof hasComments)
       if (hasComments) res.status(200).json(hasComments)
       else res.status(200).json({ message: 'no comments to show' })
     } catch (error) {

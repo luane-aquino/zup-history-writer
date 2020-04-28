@@ -7,12 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/profile.css">
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./js/profile.js" defer></script>
 </head>
 
 <body>
+    <header class="header">
+        <a href="/" class="logo">LOGO</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn">
+        <label for="menu-btn" class="menu-icon"><span class="nav-icon"></span></label>
+        <ul class="menu">
+          <li><a href="#">Perfil</a></li>
+          <li><a href="#">Stories</a></li>
+          <li><a href="#">Criar Story</a></li>
+          <li><a href="#">something else</a></li>
+        </ul>
+      </header>
     <div class="container">
+
         <header class="header">
             <a href="./profile.html" class="logo">LOGO</a>
             <input class="menu-btn" type="checkbox" id="menu-btn">
@@ -22,6 +35,7 @@
                 <li><a href="./create-story.html">Criar Story</a></li>
             </ul>
         </header>
+
         <div class="user">
             <div class="elipse-externa1">
                 <img src="images/person-24px.svg" alt="icon user" width="80" height="80" class="user-photo" />
@@ -44,40 +58,18 @@
 
         </div>
         <div class="descricao">
-            <h2>Sobre Fulano</h2>
-            <p>Olá eu sou Fulano , gosto de escrever histórias de terror e fantasia. yada yada yada yada yada yada yada
-                yada
-                yada yada yada yada yada</p>
+            <h2>Sobre <span id="name-desc"></span></h2>
+            <p id="pDesc"></p>
         </div>
         <div class="new">
             <a href="./create-story.html"><button type="button">New</button></a>
         </div>
 
         <div class="historias-usuario">
-            <ul>
-                <li>
-                    <a href="./story.html">
-                        <h1>Historia 1</h1>
-                        <h2>sub titulo</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="./story.html">
-                        <h1>Historia 1</h1>
-                        <h2>sub titulo</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="./story.html">
-                        <h1>Historia 1</h1>
-                        <h2>sub titulo</h2>
-                    </a>
-                </li>
-
+            <ul id="titleStoris">
             </ul>
         </div>
     </div>
 </body>
-<script type="module" src="teste.js"></script>
 
 </html>

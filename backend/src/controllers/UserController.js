@@ -49,9 +49,10 @@ module.exports = {
     }
   },
 
-  allUserInformations: async (req, res) => {
+  getUserProfile: async (req, res) => {
     try {
       const { params: { id } } = req
+
       const userExist = await User.findAll({
         where: { id },
         include: [{ model: Story }]
