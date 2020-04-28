@@ -49,7 +49,7 @@ module.exports = {
     }
   },
 
-  userProfile: async (req, res) => {
+  getUserProfile: async (req, res) => {
     try {
       const { params: { id } } = req
 
