@@ -16,34 +16,14 @@ body {
    /* margin: 5px;*/
     display: grid;
     grid-template-columns: 2fr 18fr ;
-    grid-template-rows: 5vh 15vh 20vh 15vh 5vh 35vh;
-    grid-template-areas:  "menuIcon n"
-                          "us us"
+    grid-template-rows: 15vh 20vh 20vh 5vh 35vh;
+    grid-template-areas:  "us us"
                           "badges badges"
                           "desc desc"
                           "new new"
                           "listStories listStories";
-    /*grid-gap: 5px;*/
-
-    
-                          
-}
-.menu-icon {
-    grid-area: menuIcon;
-    background: #005A5B;
 }
 
-.menu-icon img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
-}
-
-.nav{
-    grid-area: n;
-    background: #013841;; 
-}
 
 .user {
     grid-area: us;

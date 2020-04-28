@@ -49,13 +49,13 @@ module.exports = {
     }
   },
 
-  allUserInformations: async (req, res) => {
+  userProfile: async (req, res) => {
     try {
       const { params: { id } } = req
       const userExist = await User.findAll({ where: {id},
         include: [{model: Story}]
        })
-
+       console.log(typeof userExist)
       if (userExist) res.status(200).json(userExist)
       else res.status(404).json({ message: 'user not found' })
     } catch (error) {
