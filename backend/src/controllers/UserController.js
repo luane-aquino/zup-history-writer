@@ -26,6 +26,7 @@ module.exports = {
     try {
       const { params: { id } } = req
       const story = req.body
+      console.log('**', req.body)
       await Story.create({
         ...story,
         userId: id

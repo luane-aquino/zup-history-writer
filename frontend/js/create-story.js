@@ -13,7 +13,7 @@ sendStoryBtn.addEventListener('click', () => {
   axios.post('http://localhost:3000/user/1/story', {
     title: title.value,
     subtitle: subtitle.value,
-    tags: tags.value,
+    tags: tagsArr.toString(),
     text: story.value,
     photo: "photo1.png"
   }).then(function (response) {
