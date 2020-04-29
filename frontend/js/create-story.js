@@ -21,6 +21,7 @@ sendStoryBtn.addEventListener('click', () => {
     subtitle.value = ''
     story.value = ''
     tags.value = ''
+    reset()
   }).catch(function (error) {
     console.log(error)
   })
