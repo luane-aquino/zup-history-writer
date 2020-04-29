@@ -28,5 +28,19 @@ module.exports = {
     } catch (error) {
       res.status(500).json({ error: 'internal server error...' })
     }
-  }
+  },
+
+  commentLike : async (req, res) => {
+    try {
+      const { params: { id, idComment } } = req
+      //const comment = req.body
+      const hasComments = await Comment.update({ like: sequelize.literal('like + 1'),
+      where: { id: idComment }, where: { storyId: id } });
+      //console.log(typeof hasComments)
+      if (hasComments) res.status(200).json(hasComments)
+      else res.status(200).json({ message: 'no comments to show' })
+    } catch (error) {
+      res.status(500).json({ error: 'internal server error...' })
+    }
+  },
 }

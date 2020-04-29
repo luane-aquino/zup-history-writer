@@ -8,7 +8,7 @@ const badgeArea = document.querySelector('.div-badges')
 
 function getAllInformations() {
 
-  axios.get('http://localhost:3000/user/1/allInformations')
+  axios.get('http://localhost:3000/user/1/userProfile')
     .then(response => {
       console.log(response.data[0])
       let textNodeH1 = document.createTextNode(response.data[0].name);
