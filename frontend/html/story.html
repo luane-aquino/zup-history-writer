@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Story Writer - Story</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/story.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/story.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a href="./profile.html" class="logo">LOGO</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn">
+    <label for="menu-btn" class="menu-icon"><span class="nav-icon"></span></label>
+    <ul class="menu">
+      <li><a href="#">Perfil</a></li>
+      <li><a href="#">Stories</a></li>
+      <li><a href="#">Criar Story</a></li>
+      <li><a href="#">something else</a></li>
+    </ul>
+  </header>
+  <main class="main container">
+    <h1 id="story-title">Poseidon dos mares</h1>
+    <h2 id="story-subtitle">Subtitulo de poseidon dos mares</h2>
+    <div class="story__author">
+      <p>Por:</p>
+      <img src="./images/carol-profile.jpg" alt="carol">
+      <p id="story-author">Carol</p>
+    </div>
+    <div class="story__tags">
+      <p>Tags:</p>
+      <ul>
+        <li>Fantasia</li>
+        <li>Terror</li>
+      </ul>
+    </div>
+    <article class="story__article">
+      <img src="./images/poseidon-1.png" alt="poseidon">
+      <p id="story-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam fuga harum reprehenderit
+         illum dolorum perferendis aut nostrum, ratione excepturi consequuntur officia in, maxime eius
+         ab suscipit unde minima quas? Ipsam!</p>
+    </article>
+    <div class="story__opinion">
+      <p>O que achou:</p>
+      <div>
+        <button class="btn green">Gostou</button>
+        <button class="btn red btn--larger">Precisa melhorar</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -10,6 +10,6 @@ router.post('/:id/story', controller.createStory)
 
 router.get('/:id/stories', controller.getStories)
 
-router.get('/:id/userProfile',controller.userProfile)
+router.get('/:id/userProfile',controller.getUserProfile)
 
 module.exports = router

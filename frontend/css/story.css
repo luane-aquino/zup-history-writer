@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap');
+
+.btn--larger {
+  width: 110px;
+}
+.main {
+  font-family: 'Roboto', sans-serif;
+}
+.main h1 {
+  padding-top: 53px;
+  margin: 0;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000;
+}
+.main h2 {
+  padding-top: 12px;
+  margin: 0;
+  font-size: 24px;
+  line-height: 28px;
+  color: #6c6c6c;
+}
+.story__author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 24px;
+}
+.story__author img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  padding-right: 7px;
+}
+.story__author p {
+  margin: 0;
+}
+.story__author p:first-child {
+  font-size: 14px;
+  line-height: 16px;
+  font-style: italic;
+  padding-right: 13px;
+}
+.story__author p:nth-of-type(2) {
+  font-size: 13px;
+  line-height: 15px;
+  font-style: italic;
+}
+.story__tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+.story__tags p {
+  margin: 0;
+  padding-right: 6px;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: italic;
+}
+.story__tags ul li {
+  display: inline-block;
+  background: #c4c4c4;
+  padding: 3px 10px;
+  border-radius: 5px;
+  margin-right: 6px;
+  font-size: 12px;
+  line-height: 14px;
+  font-style: italic;
+  font-weight: normal;
+}
+.story__article img {
+  width: 100%;
+  border: 1px solid #6C6C6C;
+  margin-top: 30px;
+}
+.story__opinion {
+  background: #E2F2EB;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 37px;
+}
+.story__opinion p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding-right: 12px;
+}
+.story__opinion button {
+  margin-right: 10px;
+}

@@ -11,9 +11,13 @@ body {
     font-family: "Roboto";
     font-weight: 400;
 }
+a {
+    text-decoration: none;
+    color: #000;
+}
 
 .container {
-   /* margin: 5px;*/
+   margin-top: 58px;
     display: grid;
     grid-template-columns: 2fr 18fr ;
     grid-template-rows: 15vh 20vh 20vh 5vh 35vh;
