@@ -8,6 +8,7 @@ router.post('/:id/comment', controller.createComment)
 
 router.get('/:id/comments', controller.getComments)
 
-router.post('/:id/commentLike/:idComment', controller.commentLike)
+router.patch('/:id/commentLike/:idComment', controller.getCommentLike)
+router.patch('/:id/commentDeslike/:idComment', controller.getCommentDeslike)
 
 module.exports = router

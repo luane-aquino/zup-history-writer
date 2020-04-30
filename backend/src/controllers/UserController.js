@@ -1,5 +1,6 @@
 const { User } = require('../models')
 const { Story } = require('../models')
+const { Comment } = require('../models')
 
 module.exports = {
   createUser: async (req, res) => {
@@ -52,7 +53,31 @@ module.exports = {
 
   getUserProfile: async (req, res) => {
     try {
+      let verifyCritic = false;
       const { params: { id } } = req
+
+
+      new Promise((resolve, reject) => {
+        Comment.findAll({
+          where: { storyId: 1 }
+        }).then(comment => comment.forEach(content => {
+          if (content.like >= 4) {
+            verifyCritic = true;
+          }
+        })
+        )
+        resolve()
+
+      }).then(() => {
+        User.findOne({
+          where: { id }
+        }).then(user => {
+          if (verifyCritic) {
+            user.update({ isGoodCritic: true })
+          } else { user.update({ isGoodCritic: false }) }
+        })
+      })
+      
 
       const userExist = await User.findAll({
         where: { id },

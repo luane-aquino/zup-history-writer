@@ -3,10 +3,12 @@ const title = document.getElementById('title')
 const subtitle = document.getElementById('subtitle')
 const story = document.getElementById('story')
 const tags = document.getElementById('tags')
+
 // tag input field
 const tagContainer = document.querySelector('.tag-container')
 const tagInput = document.querySelector('.tag-container input')
 let tagsArr = []
+
 
 sendStoryBtn.addEventListener('click', () => {
   console.log('hey, you clicked me!')
@@ -22,6 +24,7 @@ sendStoryBtn.addEventListener('click', () => {
     story.value = ''
     tags.value = ''
     reset()
+
   }).catch(function (error) {
     console.log(error)
   })

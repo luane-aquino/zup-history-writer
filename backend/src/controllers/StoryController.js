@@ -9,6 +9,8 @@ module.exports = {
       const comment = req.body
       await Comment.create({
         ...comment,
+        like: 0,
+        deslike: 0,
         storyId: id
       })
       res.status(200).json({ message: 'success!!' })
@@ -29,6 +31,48 @@ module.exports = {
       res.status(500).json({ error: 'internal server error...' })
     }
   },
+
+  getCommentLike: async (req, res) => {
+    try {
+      const { params: { id, idComment } } = req
+      Comment.findOne({
+        where: { id: idComment, storyId: id }
+      }).then(comment =>{
+        let value = comment.like;
+        comment.update({like: value + 1}) 
+      })
+
+      const hasLikes = await Comment.findOne({
+        where: { id: idComment, storyId: id }
+      })
+      
+      if (hasLikes) res.status(200).json(hasLikes)
+      else res.status(200).json({ message: 'no comments to show' })
+    } catch (error) {
+      res.status(500).json({ error: 'internal server error...' })
+    }
+  },
+
+  getCommentDeslike: async (req, res) => {
+    try {
+      const { params: { id, idComment } } = req
+      Comment.findOne({
+        where: { id: idComment, storyId: id }
+      }).then(comment =>{
+        let value = comment.deslike;
+        comment.update({deslike: value + 1}) 
+      })
+
+      const hasLikes = await Comment.findOne({
+        where: { id: idComment, storyId: id }
+      })
+      
+      if (hasLikes) res.status(200).json(hasLikes)
+      else res.status(200).json({ message: 'no comments to show' })
+    } catch (error) {
+      res.status(500).json({ error: 'internal server error...' })
+    }
+  },
   getStoryById: async (req, res) => {
     try {
       const { params: { id } } = req
@@ -42,5 +86,4 @@ module.exports = {
       res.status(500).json({ error: 'internal server error...' })
     }
   }
-
 }
