@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 .header {
   background-color: #013841;
   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
@@ -28,6 +30,7 @@
   font-size: 2em;
   padding: 10px 20px;
   color: #fff;
+  font-family: 'Dancing Script', cursive;
 }
 .header .menu {
   clear: both;
