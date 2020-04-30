@@ -17,6 +17,7 @@ a {
 }
 
 .container {
+   /* margin: 5px;*/
    margin-top: 58px;
     display: grid;
     grid-template-columns: 2fr 18fr ;

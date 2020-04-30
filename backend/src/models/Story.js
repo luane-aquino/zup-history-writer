@@ -7,8 +7,7 @@ module.exports = (sequelize, Sequelize) =>
       type: Sequelize.STRING
     },
     tags: {
-      type: Sequelize.ENUM,
-      values: ['drama', 'terror', 'aventura', 'romance']
+      type: Sequelize.STRING
     },
     text: {
       type: Sequelize.TEXT
