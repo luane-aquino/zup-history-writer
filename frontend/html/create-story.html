@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Criar nova Story</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/create-story.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../js/create-story.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a href="./profile.html" class="logo">Story Writer</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn">
+    <label for="menu-btn" class="menu-icon"><span class="nav-icon"></span></label>
+    <ul class="menu">
+      <li><a href="./profile.html">Perfil</a></li>
+      <li><a href="./create-story.html">Criar Story</a></li>
+    </ul>
+  </header>
+  <main class="create__story container">
+    <div class="create__story__title">
+      <label for="title">Título:</label>
+      <input id="title" type="text">
+    </div>
+    <div class="create__story__subtitle">
+      <label for="subtitle">Subtítulo:</label>
+      <input id="subtitle" type="text">
+    </div>
+    <div class="create__story__text">
+      <label for="story">Story:</label>
+      <textarea id="story" name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="create__story__tags">
+      <label for="tags">Tags:</label>
+      <div class="tag-container">
+        <input id="tags" type="text">
+      </div>
+    </div>
+    <button id="create-story-btn">publicar</button>
+  </main>
+</body>
+</html>

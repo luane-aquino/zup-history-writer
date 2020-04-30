@@ -29,18 +29,18 @@ module.exports = {
       res.status(500).json({ error: 'internal server error...' })
     }
   },
-
-  commentLike : async (req, res) => {
+  getStoryById: async (req, res) => {
     try {
-      const { params: { id, idComment } } = req
-      //const comment = req.body
-      const hasComments = await Comment.update({ like: sequelize.literal('like + 1'),
-      where: { id: idComment }, where: { storyId: id } });
-      //console.log(typeof hasComments)
-      if (hasComments) res.status(200).json(hasComments)
-      else res.status(200).json({ message: 'no comments to show' })
+      const { params: { id } } = req
+      const storyExist = await Story.findOne({
+        where: { id }
+      })
+
+      if (storyExist) res.status(200).json(storyExist)
+      else res.status(200).json({ message: 'no stories to show' })
     } catch (error) {
       res.status(500).json({ error: 'internal server error...' })
     }
-  },
+  }
+
 }

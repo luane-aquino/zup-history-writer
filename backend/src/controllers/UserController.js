@@ -26,6 +26,7 @@ module.exports = {
     try {
       const { params: { id } } = req
       const story = req.body
+      console.log('**', req.body)
       await Story.create({
         ...story,
         userId: id
@@ -49,17 +50,20 @@ module.exports = {
     }
   },
 
-  userProfile: async (req, res) => {
+  getUserProfile: async (req, res) => {
     try {
       const { params: { id } } = req
-      const userExist = await User.findAll({ where: {id},
-        include: [{model: Story}]
-       })
+
+      const userExist = await User.findAll({
+        where: { id },
+        include: [{ model: Story }]
+      })
+
       if (userExist) res.status(200).json(userExist)
       else res.status(404).json({ message: 'user not found' })
     } catch (error) {
       res.status(500).json({ error: 'internal server error...' })
     }
   }
-    
+
 }
