@@ -6,7 +6,7 @@ const storyAuthor = document.getElementById('story-author')
 const storyTags = document.getElementById('story-tags-container')
 
 function getStory() {
-  axios.get('http://localhost:3000/story/4')
+  axios.get('http://localhost:3000/story/1')
 
     .then(response => {
       storyTitle.innerHTML = response.data.title
@@ -21,7 +21,7 @@ function getStory() {
 }
 
 function getUser() {
-  axios.get('http://localhost:3000/user/1')
+  axios.get('http://localhost:3000/user/3')
     .then(response => {
       storyAuthor.innerHTML = response.data.name
     })

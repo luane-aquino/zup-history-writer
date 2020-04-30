@@ -8,9 +8,9 @@ const badgeArea = document.querySelector('.div-badges')
 
 function getAllInformations() {
 
-  axios.get('http://localhost:3000/user/1/userProfile')
+  axios.get('http://localhost:3000/user/3/userProfile')
     .then(response => {
-     
+
       let textNodeH1 = document.createTextNode(response.data[0].name);
       console.log(response.data[0].name)
       let textNodeSpanNameDesc = document.createTextNode(response.data[0].name);
@@ -18,17 +18,17 @@ function getAllInformations() {
       h1Title.appendChild(textNodeH1);
       spanNameDesc.appendChild(textNodeSpanNameDesc);
       pDesc.appendChild(textDesc);
-      if(!response.data[0].isGoodWriter) {
+      if (!response.data[0].isGoodWriter) {
         badgeEscritor.style.display = "none";
         badgeArea.style.gridTemplateAreas = '"conq . .""critico escritor ."';
-      } 
-      if(!response.data[0].isGoodCritic) badgeCritico.style.display = "none"; 
+      }
+      if (!response.data[0].isGoodCritic) badgeCritico.style.display = "none";
 
 
-      response.data[0].stories.forEach(value =>{
-        let newH1 = document.createElement("h1"); 
+      response.data[0].stories.forEach(value => {
+        let newH1 = document.createElement("h1");
         let newH2 = document.createElement("h2");
-        let newli = document.createElement("li"); 
+        let newli = document.createElement("li");
         let h1Title = document.createTextNode(value.title);
         let h2Subtitle = document.createTextNode(value.subtitle);
         newH1.appendChild(h1Title);
@@ -38,7 +38,7 @@ function getAllInformations() {
         newli.appendChild(newH2);
         ulTitleStoris.appendChild(newli);
 
-         console.log(value.title)
+        console.log(value.title)
       })
     })
     .catch(function (error) {
