@@ -12,8 +12,10 @@ function getAllComments() {
         <img src="./images/yoda-profile.jpg" alt="yoda">
         <p>${item.comment}</p>
         <div>
-          <button class="btn green">Ajudou</button>
-          <button class="btn red btn--larger">Não ajudou</button>
+          <button class="btn green" onclick="setCurtidas(${item.id}, ${true})">Ajudou</button>
+          <label>${item.like}</label>
+          <button class="btn red btn--larger" onclick="setCurtidas(${item.id}, ${false})">Não ajudou</button>
+          <label>${item.deslike}</label>
         </div>
       </li>
       `
@@ -28,6 +30,7 @@ function getAllComments() {
 commentBtn.addEventListener('click', () => {
   axios.post('http://localhost:3000/story/1/comment', {
     comment: commentTextarea.value
+
   })
     .then(function (response) {
       console.log(response)
@@ -42,3 +45,27 @@ commentBtn.addEventListener('click', () => {
 window.addEventListener('DOMContentLoaded', () => {
   getAllComments()
 })
+
+function setCurtidas(idComment, like) {
+  if (like) {
+    document.getElementById(idComment).addEventListener('click', () => {
+      axios.get(`http://localhost:3000/story/1/commentLike/${idComment}`)
+        .then(function (response) {
+        })
+        .catch(function (error) {
+          console.log(error)
+        })
+    })
+  }
+  if (!like) {
+    commentBtn.addEventListener('click', () => {
+      axios.get(`http://localhost:3000/story/1/commentDeslike/${idComment}`)
+        .then(function (response) {
+        })
+        .catch(function (error) {
+        })
+
+
+    })
+  }
+}

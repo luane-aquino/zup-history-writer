@@ -14,5 +14,13 @@ module.exports = (sequelize, Sequelize) =>
     },
     photo: {
       type: Sequelize.STRING
+    },
+    like :{
+      type: Sequelize.INTEGER,
+      AllowNull: false
+    },
+    deslike :{
+      type: Sequelize.INTEGER,
+      AllowNull: false
     }
   })
