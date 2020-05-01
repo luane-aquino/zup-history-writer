@@ -8,7 +8,7 @@ const badgeArea = document.querySelector('.div-badges')
 
 function getAllInformations() {
 
-  axios.get('http://localhost:3000/user/3/userProfile')
+  axios.get('http://localhost:3000/user/1/userProfile')
     .then(response => {
 
       let textNodeH1 = document.createTextNode(response.data[0].name);
@@ -31,11 +31,15 @@ function getAllInformations() {
         let newli = document.createElement("li");
         let h1Title = document.createTextNode(value.title);
         let h2Subtitle = document.createTextNode(value.subtitle);
+        let newA = document.createElement("a")
+        newA.setAttribute('href', '../html/story.html')
+
         newH1.appendChild(h1Title);
         newH2.appendChild(h2Subtitle);
 
-        newli.appendChild(newH1);
-        newli.appendChild(newH2);
+        newli.appendChild(newA);
+        newA.appendChild(newH1);
+        newA.appendChild(newH2);
         ulTitleStoris.appendChild(newli);
 
         console.log(value.title)

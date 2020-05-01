@@ -10,7 +10,7 @@ function getAllComments() {
       for (const item of response.data) {
         allComments += `
       <li>
-        <img src="./images/yoda-profile.jpg" alt="yoda">
+        <img src="../images/yoda-profile.jpg" alt="yoda">
         <p>${item.comment}</p>
         <div>
           <button class="btn green" id="btn-true-${item.id}">Ajudou</button>
@@ -20,17 +20,17 @@ function getAllComments() {
         </div>
       </li>
       `
-      ids.push(item.id);
+        ids.push(item.id);
       }
       commentList.innerHTML = allComments
 
-      ids.forEach( value => {
-        let id = "btn-true-"+value;
+      ids.forEach(value => {
+        let id = "btn-true-" + value;
         document.getElementById(id).onclick = setCurtidas(id, true);
       });
-      
-      ids.forEach( value => {
-        let id = "btn-false-"+value;
+
+      ids.forEach(value => {
+        let id = "btn-false-" + value;
         document.getElementById(id).onclick = setCurtidas(id, false);
       });
 
@@ -41,12 +41,13 @@ function getAllComments() {
 }
 
 commentBtn.addEventListener('click', () => {
+  console.log('*** em post')
   axios.post('http://localhost:3000/story/1/comment', {
     comment: commentTextarea.value
 
   })
     .then(function (response) {
-      console.log(response)
+      console.log('***', response)
       commentTextarea.value = ''
       getAllComments()
     })
@@ -62,13 +63,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function setCurtidas(idComment, like) {
   if (like) {
-      document.getElementById(idComment).addEventListener('click', () => {
-      let id = idComment.slice(9, idComment.length+1)
+    document.getElementById(idComment).addEventListener('click', () => {
+      let id = idComment.slice(9, idComment.length + 1)
       axios.patch(`http://localhost:3000/story/1/commentLike/${id}`)
         .then(function (response) {
           const idComent = response.data.id
-          const label = document.getElementById("lt"+idComent)
-          label.innerHTML=""
+          const label = document.getElementById("lt" + idComent)
+          label.innerHTML = ""
           const like = document.createTextNode(response.data.like)
           label.appendChild(like)
         })
@@ -79,12 +80,12 @@ function setCurtidas(idComment, like) {
   }
   if (!like) {
     document.getElementById(idComment).addEventListener('click', () => {
-      let id = idComment.slice(10, idComment.length+1)
+      let id = idComment.slice(10, idComment.length + 1)
       axios.patch(`http://localhost:3000/story/1/commentDeslike/${id}`)
         .then(function (response) {
           const idComent = response.data.id
-          const label = document.getElementById("lf"+idComent)
-          label.innerHTML=""
+          const label = document.getElementById("lf" + idComent)
+          label.innerHTML = ""
           const deslike = document.createTextNode(response.data.deslike)
           label.appendChild(deslike)
         })

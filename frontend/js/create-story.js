@@ -12,7 +12,7 @@ let tagsArr = []
 
 sendStoryBtn.addEventListener('click', () => {
   console.log('hey, you clicked me!')
-  axios.post('http://localhost:3000/user/3/story', {
+  axios.post('http://localhost:3000/user/1/story', {
     title: title.value,
     subtitle: subtitle.value,
     tags: tagsArr.toString(),

@@ -21,7 +21,7 @@ function getStory() {
 }
 
 function getUser() {
-  axios.get('http://localhost:3000/user/3')
+  axios.get('http://localhost:3000/user/1')
     .then(response => {
       storyAuthor.innerHTML = response.data.name
     })
